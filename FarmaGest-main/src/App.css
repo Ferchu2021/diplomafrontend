@@ -1,0 +1,454 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f1014;
+  color: #0f1014;
+}
+.containerSection {
+  height: 100%;
+}
+.modal-header {
+  background-color: #abd34e; /* Color de fondo gris claro */
+  border-bottom: 1px solid #dee2e6; /* Línea inferior sutil */
+  color: #fff;
+}
+.modal-title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo gris con transparencia */
+  z-index: 1040; /* Debe estar por debajo del modal */
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  flex-direction: column;
+}
+.logo-container {
+  max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+  margin: 0 auto; /* Centra el logo horizontalmente */
+}
+.logo {
+  max-width: 100%; /* Limita el ancho máximo del logo al tamaño de su contenedor */
+  height: 90%;
+}
+.formulario {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formulario label {
+  display: block; /* Esto garantiza que cada label se muestre en una línea nueva */
+  text-align: left;
+  font-size: 1.2rem;
+  color: #abd34e;
+  width: 20%;
+}
+
+.formulario input {
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: -10px;
+  width: 20%;
+}
+
+.formulario button {
+  padding: 10px;
+  background-color: #abd34e;
+  color: #0f1014;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.formulario button:hover {
+  background-color: #d8fa89;
+}
+.forgetPassword {
+  font-size: 13px;
+  margin-top: -20px;
+}
+.forgetPassword:hover {
+  color: #d8fa89;
+  cursor: pointer;
+}
+
+.buildPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  font-size: 34px;
+  font-weight: bold;
+}
+.iconBuild {
+  height: 100px;
+  width: 100px;
+}
+
+.containerGeneralAPP {
+  display: flex;
+  flex-direction: column;
+  /* border: solid blue 2px; */
+  height: 100vh;
+}
+section {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #c1c1c1;
+}
+header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #0f1014;
+  height: 70px;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+.errorsHandler {
+  margin-top: -20px;
+  color: #ff9271;
+}
+.iconUser {
+  color: #abd34e;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.iconUser:hover {
+  color: #d5ff71;
+}
+.bodyContainer {
+  display: flex;
+  /* border: red solid 2px; */
+  height: 100%;
+  /*   width: 100%; */
+}
+nav.smallActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+  justify-content: space-around;
+  /*  justify-content: flex-start; */
+  background-color: #0f1014;
+}
+
+nav.smallActive a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav.smallInactive {
+  display: none;
+}
+.iconMenu {
+  width: 40px;
+  height: 40px;
+  color: #abd34e;
+  cursor: pointer;
+}
+
+.iconMenu:hover {
+  color: #d5ff71;
+
+  border-radius: 10px;
+}
+
+nav.bigInactive {
+  display: none;
+}
+
+nav.bigActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* justify-content: flex-start; */
+  width: 270px;
+  background-color: #0f1014;
+}
+
+nav.bigActive span {
+  color: #abd34e;
+  padding: 10px 18px;
+  /*  text-decoration: none; */
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+.itemMenu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 90%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.itemMenu:hover {
+  background-color: rgb(58, 58, 58);
+  border-radius: 10px;
+  width: 98%;
+}
+
+.itemMenu:hover * {
+  color: #abd34e;
+}
+
+.headerSelected {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.inputSearch {
+  height: 55px;
+  border-radius: 10px;
+  border-color: #ccc;
+  font-family: Arial, FontAwesome;
+  padding-left: 10px;
+  border: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.iconResetPassword {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.iconABM:hover,
+.iconResetPassword:hover {
+  color: #1353c9;
+}
+
+.iconABMDisabled,
+.iconResetPassworDisabled {
+  width: 32px;
+  height: 32px;
+  cursor: not-allowed;
+  color: #636363;
+}
+
+.containerSelected {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: #0f1014;
+  height: 100%;
+}
+
+.containerTableAndPagesSelected {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-bottom: 10px;
+  background-color: #d6d6d6;
+  border-radius: 10px;
+}
+.headerTable {
+  width: 100%;
+  /*  border-collapse: collapse; */
+}
+
+.headerTable th,
+.headerTable td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+  height: 45px;
+}
+
+.headerTable th {
+  background-color: #f2f2f2;
+}
+
+.headerTable th:last-child,
+.headerTable td:last-child {
+  /*   width: 70px; */
+  white-space: nowrap; /* Evitar que el contenido se ajuste automáticamente */
+}
+
+.headerTable .spinner-border {
+  margin-top: 10%;
+  width: 100px;
+  height: 100px;
+}
+
+.NoData {
+  text-align: center;
+  padding: 16px;
+  color: #555;
+}
+
+/* Estilos para filas impares */
+.headerTable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.headerTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  color: #333;
+}
+.itemProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #e8e8e8;
+  padding: 10px;
+}
+.itemProfile:hover {
+  background-color: #ddd;
+}
+.NoData {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.iconABM {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.iconABM:hover {
+  color: #1353c9;
+}
+.buttonPage {
+  background-color: #abd34e;
+  padding: 7px 10px 7px 10px;
+  color: #000;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+.buttonPage:hover {
+  background-color: #d5ff71;
+}
+.buttonPage:disabled {
+  background-color: rgb(145, 167, 96);
+}
+.buttonNewItem {
+  display: flex;
+  align-items: center;
+  background-color: #abd34e;
+  padding: 13px 10px 13px 10px;
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.buttonNewItem:hover {
+  background-color: #d5ff71;
+}
+
+.buttonSelect {
+  display: flex;
+  align-items: center;
+  background-color: #abd34e;
+  padding: 13px 10px 13px 10px;
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.buttonSelect option {
+  background-color: #dbe9bb; /* Color de fondo deseado para las opciones */
+}
+.iconConfirm {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.buttonConfirm {
+  background-color: #abd34e;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.buttonConfirm:hover {
+  background-color: #d5ff71;
+  color: #000;
+}
+
+.buttonConfirm:disabled {
+  background-color: #636363;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 1080px) and (min-height: 650px) {
+  .headerTable th,
+  .headerTable td {
+    height: 65px;
+    padding: 8px;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 945px) {
+  .headerTable th,
+  .headerTable td {
+    height: 80px;
+    padding: 8px;
+  }
+}

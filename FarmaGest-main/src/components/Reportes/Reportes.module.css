@@ -1,0 +1,338 @@
+.containerSelected {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #0f1014;
+  height: 100%;
+}
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-weight: bold;
+}
+.containerDate {
+  align-items: center;
+  background-color: #60635f;
+  border-radius: 5px;
+  border-color: #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding-left: 5px;
+  margin-right: 10px;
+}
+
+.formSelectDate {
+  height: 38px;
+  width: 150px;
+  color: #60635f;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  border-color: #ccc;
+  font-family: Arial, FontAwesome;
+  padding-left: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.buttonAplicar {
+  display: flex;
+  align-items: center;
+  background-color: #abd34e;
+  border: none;
+  height: 38px;
+  padding: 0px 10px 0px 10px;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.buttonAplicar:hover {
+  background-color: #d5ff71;
+}
+.buttonAplicar:disabled {
+  background-color: #a9a9a9;
+  cursor: not-allowed;
+}
+
+.buttonTablaGraficos {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  border: none;
+  height: 38px;
+  padding: 0px 5px 0px 5px;
+  color: #abd34e;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.buttonTablaGraficos:hover {
+  background-color: #1d1d1d;
+}
+.buttonTablaGraficosInactivo {
+  display: flex;
+  align-items: center;
+  background-color: #696969;
+  border: none;
+  height: 38px;
+  padding: 0px 5px 0px 5px;
+  color: #cacaca;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/*Tabla */
+.tableContainer {
+  overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+  border: 1px solid #ccc; /* Opcional: Agrega un borde al contenedor */
+  border-radius: 5px; /* Opcional: Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Sombra para diseño */
+  background-color: rgb(230, 230, 230);
+  max-height: 470px;
+  margin-top: 15px;
+}
+.headerTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.headerTable th,
+.headerTable td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.headerTable th {
+  background-color: #f2f2f2;
+}
+
+.headerTable th:last-child,
+.headerTable td:last-child {
+  width: 70px;
+  white-space: nowrap; /* Evitar que el contenido se ajuste automáticamente */
+}
+
+.headerTable .spinner-border {
+  margin-top: 10%;
+  width: 100px;
+  height: 100px;
+}
+
+.NoData {
+  text-align: center;
+  padding: 16px;
+  color: #555;
+}
+
+/* Estilos para filas impares */
+.headerTable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.headerTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Graficos */
+.container {
+  margin-top: 15px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1250px;
+  max-height: 470px;
+  overflow-x: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.chartContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 350px;
+  position: relative;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 0;
+}
+
+.yAxis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-right: 10px;
+  position: relative;
+}
+
+.yAxisLine {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.yAxisLabel {
+  margin-right: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.yGuideLine {
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.bars {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.barWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 40px;
+  background-color: #4caf50;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.bar:hover {
+  transform: scaleY(1.1);
+  background-color: #388e3c;
+}
+
+.botonMontoTotal {
+  background-color: #4caf50;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botonMontoTotal:hover {
+  background-color: #388e3c;
+  cursor: pointer;
+}
+
+.botonCantidad {
+  background-color: #af4c4c;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botonCantidad:hover {
+  background-color: #f64e42;
+  cursor: pointer;
+}
+
+.barCantidad {
+  width: 40px;
+  background-color: #af4c4c;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.barCantidad:hover {
+  transform: scaleY(1.1);
+  background-color: #f64e42;
+}
+
+.barLabel {
+  position: absolute;
+  top: -20px;
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+}
+
+.label {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+.noData {
+  text-align: center !important; /* Centra el texto horizontalmente */
+  padding: 20px; /* Añade algo de padding para mejorar la estética */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  color: #666; /* Color del texto */
+  background-color: #f9f9f9; /* Color de fondo para la celda sin datos */
+}
+
+@media screen and (min-width: 1080px) and (min-height: 650px) {
+  .headerTable th,
+  .headerTable td {
+    height: 65px;
+    padding: 8px;
+  }
+  .tableContainer {
+    max-height: 650px;
+  }
+  .container {
+    height: 92%;
+  }
+  .chartContainer {
+    height: 90%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 945px) {
+  .headerTable th,
+  .headerTable td {
+    height: 70px;
+    padding: 8px;
+  }
+  .tableContainer {
+    max-height: 780px;
+  }
+  .container {
+    height: 92%;
+    max-width: 1850px;
+    max-height: 870px;
+  }
+  .chartContainer {
+    height: 90%;
+  }
+}

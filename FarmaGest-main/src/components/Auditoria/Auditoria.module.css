@@ -1,0 +1,88 @@
+.containerTableAndPagesSelected {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-bottom: 10px;
+  background-color: #d6d6d6;
+  border-radius: 10px;
+}
+
+.headerTable {
+  /*   width: 100%; */
+  border-collapse: collapse;
+}
+
+.headerTable th,
+.headerTable td {
+  border: 1px solid #dddddd;
+  padding: 6px;
+  text-align: left;
+  height: 44px;
+  white-space: nowrap;
+  max-width: 200px;
+  overflow-x: hidden;
+}
+
+.headerTable th {
+  background-color: #f2f2f2;
+}
+
+.headerTable th:last-child,
+.headerTable td:last-child {
+  width: 70px;
+  white-space: nowrap; /* Evitar que el contenido se ajuste automáticamente */
+}
+
+.headerTable .spinner-border {
+  margin-top: 10%;
+  width: 100px;
+  height: 100px;
+}
+
+.NoData {
+  text-align: center;
+  padding: 16px;
+  color: #555;
+}
+
+/* Estilos para filas impares */
+.headerTable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.headerTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+@media screen and (min-width: 1080px) and (min-height: 650px) {
+  .headerTable {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .headerTable th,
+  .headerTable td {
+    height: 65px;
+    padding: 8px;
+  }
+  .containerTableAndPagesSelected {
+    width: 100%;
+    max-width: 980px; /* Define un límite máximo para la tabla */
+    margin: auto; /* Centra la tabla si el contenedor es más grande */
+    overflow-x: auto; /* Activa el scroll horizontal si es necesario */
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 945px) {
+  .headerTable th,
+  .headerTable td {
+    height: 80px;
+    padding: 8px;
+  }
+  .containerTableAndPagesSelected {
+    width: 100%;
+    max-width: 1800px; /* Define un límite máximo para la tabla */
+    margin: auto; /* Centra la tabla si el contenedor es más grande */
+    overflow-x: auto; /* Activa el scroll horizontal si es necesario */
+  }
+}
